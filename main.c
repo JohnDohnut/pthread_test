@@ -48,7 +48,9 @@ int main(int argv, char* argc[]){
             printf("err\n");
     }
     for(int i=0; i<20; i++){
-        pthread_join(tid[i],NULL);
+        err = pthread_join(tid[i],NULL);
+        if(err<0)
+            printf("err\n");
     }
 
 
