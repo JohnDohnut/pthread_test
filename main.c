@@ -50,7 +50,7 @@ int main(int argv, char* argc[]){
     for(int i=0; i<20; i++){
         err = pthread_join(tid[i],NULL);
         if(err<0)
-            printf("err on tid : %d\n");
+            printf("err on tid : %d\n",tid[i]);
     }
 
 
