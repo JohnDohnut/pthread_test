@@ -25,7 +25,7 @@ void* myThread(void* argv){
     thread_arg* arg = (thread_arg*)argv;
     pthread_mutex_t *lock = arg->lock;
     printf("tid : %d \n",pthread_self());
-    pthread_mutex_lock(lock); /// count will be printed ascending order while tid is not.
+    pthread_mutex_lock(lock); /// count will be printed in ascending order while tid is not.
     arg->count ++;
     printf("count : %d\n", arg->count);
     pthread_mutex_unlock(lock);
